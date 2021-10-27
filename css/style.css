@@ -226,6 +226,9 @@ ul {
   justify-content: center;
   align-items: center;
 }
+.button-section:hover {
+  cursor: pointer;
+}
 
 .our-characteristics {
   padding-top: 94px;
@@ -620,4 +623,38 @@ ul {
 .social-link-footer:focus .social-icon-footer {
   margin: 12px;
   fill: #ffffff;
+}
+.backdrop {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 250ms, visibility 250ms;
+}
+.modal-window {
+  width: 528px;
+  min-height: 581px;
+  background-color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 1px solid #0000001a;
+  border-radius: 5px;
+}
+.x-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0000001a;
+  background-color: unset;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
