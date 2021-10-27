@@ -80,10 +80,25 @@ ul {
   color: #212121;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--accent-color);
+}
+.navigation-link.current::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--accent-color);
+  box-sizing: inherit;
 }
 .contacts {
   font-family: "Roboto";
@@ -98,12 +113,18 @@ ul {
   margin-right: 10px;
   vertical-align: middle;
   fill: #757575;
+  transition-property: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-icon-phone {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
   fill: #757575;
+  transition-property: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .email {
   position: relative;
@@ -117,6 +138,9 @@ ul {
   margin-right: 30px;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .phone {
   display: flex;
@@ -128,6 +152,9 @@ ul {
   color: #757575;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: var(--accent-color);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .email:hover,
 .email:focus {
@@ -164,6 +191,9 @@ ul {
   border: 0px;
   border-radius: 4px;
   padding: 5.89px 22.4px 5.89px 22.4px;
+  transition-property: background-color #2196f3, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-list {
   display: flex;
@@ -196,11 +226,43 @@ ul {
   margin-bottom: 30px;
   flex-basis: calc(100% / 3 - 30px);
   border: 1px solid #eeeeee;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .project-item:hover,
 .project-item:focus {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+.project-item-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-item:hover .project-overlay {
+  transform: translateY(0%);
+}
+.project-overlay-text {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  padding: 63px 23px;
 }
 .project-discription {
   width: 100;
@@ -307,6 +369,9 @@ ul {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   height: 44px;
+  transition-property: background-color, border-radius;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-item-footer:not(:last-child) {
   margin-right: 10px;
