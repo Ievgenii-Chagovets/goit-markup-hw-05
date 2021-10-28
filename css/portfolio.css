@@ -255,6 +255,9 @@ ul {
 .project-item:hover .project-overlay {
   transform: translateY(0%);
 }
+.project-item:focus .project-overlay {
+  transform: translateY(0%);
+}
 .project-overlay-text {
   font-family: Roboto;
   font-weight: normal;

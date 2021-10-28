@@ -128,12 +128,27 @@
             <div class="container">
                 <h2 class="what-we-are-doing-text">Чем мы занимаемся</h2>
                 <ul class="what-we-are-doing-item list">
-                    <li class="what-we-are-doing-list"><img src="./images/what-we-are-doing-1.jpg" alt="" width="370"
-                            height="294"></li>
-                    <li class="what-we-are-doing-list"><img src="./images/what-we-are-doing-2.jpg" alt="" width="370"
-                            height="294"></li>
-                    <li class="what-we-are-doing-list"><img src="./images/what-we-are-doing-3.jpg" alt="" width="370"
-                            height="294"></li>
+                    <li class="what-we-are-doing-list">
+                        <img src="./images/what-we-are-doing-1.jpg" alt="" width="370"
+                            height="294">
+                        <div class="our-app">
+                            <p class="our-app-text">десктопные приложения</p>
+                        </div>
+                    </li>
+                    <li class="what-we-are-doing-list">
+                        <img src="./images/what-we-are-doing-2.jpg" alt="" width="370"
+                            height="294">
+                        <div class="our-app">
+                            <p class="our-app-text">мобильные приложения</p>
+                        </div>
+                    </li>
+                    <li class="what-we-are-doing-list">
+                        <img src="./images/what-we-are-doing-3.jpg" alt="" width="370"
+                                height="294">
+                        <div class="our-app">
+                            <p class="our-app-text">дизайнерские решения</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -401,7 +416,11 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
-            <button type="button" class="x-button" data-modal-close>X</button>
+            <button type="button" class="x-button" data-modal-close>
+                <svg class="icon-close-buttom">
+                    <use href="./images/sprite.svg#icon-close-buttom"></use>
+                </svg>
+            </button>
         </div>
     </div>
     <script src="./js/modal.js"></script>
